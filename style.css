@@ -1,0 +1,136 @@
+*  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display:grid; 
+    grid-template-rows: 1fr 4fr; 
+}
+.header {
+    position: relative;
+    background-color: rgb(21, 109, 173);
+    height:200px;  
+    //box-shadow: 5px 10px red;
+    z-index: 1;
+}
+
+.header > * {
+    margin-top: 5px;
+    position: absolute;
+    letter-spacing: 15px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    padding: 20px; 
+    color: rgb(173, 42, 168);
+    font-family: monospace, fantasy, sans-serif;  
+}
+
+
+.main {
+    background-color: rgb(48, 12, 47);
+    position:relative;
+}
+
+.container {
+    position: absolute;
+    border:5px solid rgb(50, 150, 207); 
+    height: 500px;
+    width:500px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid {
+    border: 1px solid black; 
+    background-color: white;
+    font-size:7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(41, 37, 23);
+}
+
+.grid:hover {
+    cursor: pointer;
+}
+
+
+.score {
+    align-items: center;
+    font-size:4em;
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(222, 218, 204);
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.hide {
+    width:30%;
+    height:40%;
+    background-color:rgb(21, 109, 173);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    border-radius: 10%;
+    font-weight: bolder;
+}
+
+.hide >* {
+    margin:2%;
+    padding:5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+.players > *{
+    padding:3%;
+}
+
+.hide-header {
+    font-size: 2em;
+}
+
+.btn {
+    padding:2% 10%;
+    border-radius: 12px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.hideChoice {
+    display: none;
+}
+
+.restart {
+    position: absolute;
+    left:50%;
+    top:90%;
+    transform: translate(-50%, -80%);
+    padding:1% 3%;
+    border-radius: 20px;
+}
+
+.restart:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
